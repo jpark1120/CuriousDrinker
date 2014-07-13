@@ -81,11 +81,12 @@ var data = [
 
 window.onload = function(){
 
-
   d3.select("button")
     .on("click", function(){
       projectData(data)
     });
+
+  mapInitialize();
 
 }
 
