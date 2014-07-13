@@ -51,8 +51,8 @@ function projectData(dataset){
 // var data = [400, 260];
 
 var data = [ 
-  { name: "Facebook", checkins: "400", color: "#78DBE2" },
-  { name: "Foursquare", checkins: "260", color: "#FFA474"}
+  { name: "visitors", checkins: "1517", color: "#78DBE2" },
+  { name: "checkins", checkins: "1978", color: "#FFA474"}
 ];
 
 
