@@ -11,14 +11,10 @@ body {
   padding: 0
 }
 
-/*svg {
-  border: 1px solid black;
-}*/
-
 .col_left { 
   float: left;
   width: 70%;
-  height: 70%; 
+  height: 90%; 
 }
 
 .col_right {
