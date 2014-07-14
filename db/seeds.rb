@@ -1,3 +1,4 @@
+Place.delete_all
 
 suggested_places = Place.explore
 
