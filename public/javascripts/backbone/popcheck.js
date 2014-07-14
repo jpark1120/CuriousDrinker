@@ -12,6 +12,10 @@ var collection;
 Popcheckapp.initialize = function(){
   collection = new Popcheckapp.Collections.PlaceCollection();
 
+  var listView = new Popcheckapp.Views.PlaceListView({
+    collection: collection,
+    el: $('.places_container')
+  });
 
   collection.fetch();
 
@@ -29,6 +33,3 @@ $(function(){
   Popcheckapp.initialize();
 
 });
-
-
-

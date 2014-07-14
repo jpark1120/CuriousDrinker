@@ -12,7 +12,7 @@ function projectData(dataset){
     // output range
     .range([0, height-10]);
 
-  var svg = d3.select("#info_display")
+  var svg = d3.select(".info_container")
                .append("svg")
                .attr("width", width)
                .attr("height", height);

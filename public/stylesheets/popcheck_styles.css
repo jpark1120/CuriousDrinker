@@ -33,4 +33,9 @@ body {
   border: 1px solid black;
   height: 350px;
   width: 200px;
+  overflow: scroll;
+}
+
+.places_container div{
+  border: 1px solid red;
 }
