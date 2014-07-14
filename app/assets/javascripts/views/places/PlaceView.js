@@ -1,1 +1,0 @@
-var Popcheckapp = Popcheckapp || { Models: {}, Collections: {}, Views: {} };

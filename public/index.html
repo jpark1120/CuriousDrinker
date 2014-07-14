@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+  <title>test bar chart</title>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="stylesheets/popcheck_styles.css">
+
+  <!-- Libraries -->
+  <script type="text/javascript" src='javascripts/libraries/jquery.js'></script>
+  <script type="text/javascript" src='javascripts/libraries/underscore.js'></script>
+  <script type="text/javascript" src='javascripts/libraries/backbone.js'></script>
+  <script type="text/javascript" src="javascripts/libraries/d3.js"></script>
+  <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=#{Rails.application.secrets.google_map_api}"></script>
+  
+
+  <!-- Templates -->
+
+
+
+  <!-- app -->
+  <script type="text/javascript" src='javascripts/backbone/popcheck.js'></script>
+  <script type="text/javascript" src='javascripts/backbone/bargraph.js'></script>
+  <script type="text/javascript" src='javascripts/backbone/googlemap.js'></script>
+
+  <!-- Models -->
+  <script type="text/javascript" src='javascripts/backbone/models/Place.js'></script>
+
+  <!-- Collections -->
+  <script type="text/javascript" src='javascripts/backbone/collections/PlaceCollection.js'></script>
+
+  <!-- Views -->
+  <script type="text/javascript" src='javascripts/backbone/views/places/PlaceView.js'></script>
+  <script type="text/javascript" src='javascripts/backbone/views/places/PlaceListView.js'></script>
+
+
+</head>
+<body>
+
+  <h2>Click to get Visualization</h2>
+
+  <button>BOOM!</button>
+
+  <br />
+
+  <div id="map-canvas" class="col_left">
+  </div>
+
+  <div id="info_display" class="col_right">
+  </div>
+
+</body>
+</html>
+
+
+
+
