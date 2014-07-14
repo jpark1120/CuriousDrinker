@@ -1,8 +1,8 @@
 
 function projectData(dataset){
 
-  var width = 250,
-      height = 300;
+  var width = 150,
+      height = 200;
 
   var barWidth = width / dataset.length;
 

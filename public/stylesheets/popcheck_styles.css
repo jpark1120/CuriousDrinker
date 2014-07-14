@@ -19,4 +19,18 @@ body {
 
 .col_right {
   float: left;
+  border: 1px solid black;
+}
+
+/* temp borders */
+.info_container{
+  border: 1px solid black;
+  height: 210px;
+  width: 200px;
+}
+
+.places_container{
+  border: 1px solid black;
+  height: 350px;
+  width: 200px;
 }

@@ -6,9 +6,11 @@ var data = [
   { name: "checkins", checkins: "1978", color: "#FFA474"}
 ];
 
+// for testing purposes only, move back into initialize afterwards
+var collection;
 
 Popcheckapp.initialize = function(){
-  var collection = new Popcheckapp.Collections.PlaceCollection();
+  collection = new Popcheckapp.Collections.PlaceCollection();
 
 
   collection.fetch();
