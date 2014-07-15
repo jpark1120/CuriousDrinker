@@ -35,7 +35,7 @@ Popcheckapp.Views.PlaceView = Backbone.View.extend({
     } else {
       this.$el.removeClass('clicked').addClass('unclicked');
       console.log("removed!")
-      // removeMarker(placeObject);
+      removeMarker(placeObject.id);
     }
   }
 

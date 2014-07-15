@@ -16,7 +16,7 @@ Popcheckapp.initialize = function(){
 // for testing purposes only, move back into initialize afterwards
 var collection;
 var map;
-
+var markers = {};
 
 $(function(){
 

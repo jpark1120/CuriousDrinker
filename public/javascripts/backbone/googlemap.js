@@ -21,13 +21,16 @@ function addMarker(placeObject, data){
       position: placeLatLng,
       map: map,
       title: placeObject.name,
+      id: placeObject.id,
       animation: google.maps.Animation.DROP,
       icon: {
         path: google.maps.SymbolPath.CIRCLE,
         scale: 10
       }
   });
-// str.replace("Microsoft", "W3Schools");
+
+  markers[placeObject.id] = placeMarker;
+
   map.panTo(placeLatLng);
 
   var contentString = "<div class='infowindow'><p id='place"+ placeObject.id +"'>" + placeObject.name +"</p></div>"
@@ -38,7 +41,7 @@ function addMarker(placeObject, data){
 
   infowindow.open(map, placeMarker);
 
-  google.maps.event.addListener(infowindow,'domready',function(){
+  google.maps.event.addListener(infowindow, 'domready', function(){
     console.log("yay");
     projectData(data, placeObject.id);
     $('.infowindow').parent().parent().siblings().css('opacity', '0.7');
@@ -52,8 +55,9 @@ function addMarker(placeObject, data){
   });
 }
 
-// function removeMarker(placeObject){
-  
-//   marker.setMap(null);
-// }
+function removeMarker(placeId){
+  var here = markers[placeId];
+  here.setMap(null);
+  delete markers[placeId];
+}
 
