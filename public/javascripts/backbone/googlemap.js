@@ -41,12 +41,19 @@ function addMarker(placeObject, data){
   google.maps.event.addListener(infowindow,'domready',function(){
     console.log("yay");
     projectData(data, placeObject.id);
-    $('.infowindow').parent().parent().siblings().css('opacity', '1');
+    $('.infowindow').parent().parent().siblings().css('opacity', '0.7');
     $('.gm-style-iw').css('width', '100%');
     $('.gm-style-iw').css('left', '0px');
   });
 
-
+  google.maps.event.addListener(placeMarker, 'click', function(){
+    infowindow.open(map, placeMarker);
+    projectData(data, placeObject.id);
+  });
 }
 
+// function removeMarker(placeObject){
+  
+//   marker.setMap(null);
+// }
 

@@ -17,6 +17,7 @@ Popcheckapp.initialize = function(){
 var collection;
 var map;
 
+
 $(function(){
 
   mapInitialize();

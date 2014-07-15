@@ -41,8 +41,11 @@ body {
   border: 1px solid red;
 }
 
-
 .infowindow {
   min-height: 110px;
   text-align: center;
+}
+
+.clicked {
+  background-color: green;
 }
