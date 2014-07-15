@@ -1,7 +1,7 @@
 function mapInitialize() {
   var mapOptions = {
     center: new google.maps.LatLng(40.7160085,-73.9830292),
-    zoom: 15,
+    zoom: 18,
     scrollwheel: false,
     streetViewControl: false
   };
@@ -18,15 +18,15 @@ function addMarker(lat, lng, info, data){
       position: placeLatLng,
       map: map,
       animation: google.maps.Animation.DROP,
-      // icon: {
-      //   path: google.maps.SymbolPath.CIRCLE,
-      //   scale: 10
-      // }
+      icon: {
+        path: google.maps.SymbolPath.CIRCLE,
+        scale: 10
+      }
   });
 
   map.panTo(placeLatLng);
 
-  var contentString = "<div style='height: 150px;'><p class='place_graph'>" + info +"</p></div>"
+  var contentString = "<div class='infowindow'><p class='place_graph'>" + info +"</p></div>"
 
   var infowindow = new google.maps.InfoWindow({
       content: contentString
@@ -37,6 +37,10 @@ function addMarker(lat, lng, info, data){
   google.maps.event.addListener(infowindow,'domready',function(){
     console.log("yay");
     projectData(data);
+    $('.infowindow').parent().parent().siblings().css('opacity', '1');
+    $('.infowindow').parent().parent().siblings().css('text-align', 'center');
+    $('.gm-style-iw').css('width', '100%');
+    $('.gm-style-iw').css('left', '0px');
   });
 
 

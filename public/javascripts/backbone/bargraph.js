@@ -33,16 +33,16 @@ function projectData(dataset){
         .attr("y", function(d) { return height - y(d.checkins) ; })
         .attr("height", function(d) { return y(d.checkins) ; });
 
-    svg.selectAll("text")
-      .data(dataset)
-      .enter()
-      .append("text")
-      .text(function(d) { return d.name })
-        .attr("x", function(d, i) { return i * barWidth + 25 } )
-        .attr("y", height - 10)
-        // .attr("y", function(d) { return height - y(d.checkins) })
-        // .attr("dy", "1em")
-          .style('font-size', "15px")
+    // svg.selectAll("text")
+    //   .data(dataset)
+    //   .enter()
+    //   .append("text")
+    //   .text(function(d) { return d.name })
+    //     .attr("x", function(d, i) { return i * barWidth + 25 } )
+    //     .attr("y", height - 10)
+    //     // .attr("y", function(d) { return height - y(d.checkins) })
+    //     // .attr("dy", "1em")
+    //       .style('font-size', "15px")
 
 }
 // .ease("elastic", 1, 0.15)

@@ -10,6 +10,7 @@ Popcheckapp.Views.PlaceView = Backbone.View.extend({
     'click' : 'renderBarGraph'
   },
   render: function(){
+    // this initial empty isn't necessary but here for consistency and future feature implementation
     this.$el.empty();
     this.$el.html(this.template(this.model.attributes));
 
