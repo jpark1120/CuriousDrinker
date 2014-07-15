@@ -10,13 +10,17 @@ function mapInitialize() {
 
 }
 
-function addMarker(lat, lng, info, data, place_id){
+function addMarker(placeObject, data){
+  var lat = parseFloat(placeObject.latitude);
+  var lng = parseFloat(placeObject.longitude);
+
   var placeLatLng = new google.maps.LatLng(lat, lng);
 
   // places marker(symbol) on map
   var placeMarker = new google.maps.Marker({
       position: placeLatLng,
       map: map,
+      title: placeObject.name,
       animation: google.maps.Animation.DROP,
       icon: {
         path: google.maps.SymbolPath.CIRCLE,
@@ -26,7 +30,7 @@ function addMarker(lat, lng, info, data, place_id){
 // str.replace("Microsoft", "W3Schools");
   map.panTo(placeLatLng);
 
-  var contentString = "<div class='infowindow'><p id='place"+ place_id +"'>" + info +"</p></div>"
+  var contentString = "<div class='infowindow'><p id='place"+ placeObject.id +"'>" + placeObject.name +"</p></div>"
 
   var infowindow = new google.maps.InfoWindow({
       content: contentString
@@ -36,9 +40,8 @@ function addMarker(lat, lng, info, data, place_id){
 
   google.maps.event.addListener(infowindow,'domready',function(){
     console.log("yay");
-    projectData(data, place_id);
+    projectData(data, placeObject.id);
     $('.infowindow').parent().parent().siblings().css('opacity', '1');
-    // $('.infowindow').parent().parent().siblings().css('text-align', 'center');
     $('.gm-style-iw').css('width', '100%');
     $('.gm-style-iw').css('left', '0px');
   });

@@ -26,13 +26,16 @@ Popcheckapp.Views.PlaceView = Backbone.View.extend({
       { name: "checkins", checkins: this.model.attributes.fsq_checkins, color: "#FFA474" }
     ];
 
-    var lat = parseFloat(this.model.attributes.latitude);
-    var lng = parseFloat(this.model.attributes.longitude);
-    var info = this.model.attributes.name;
-    var place_id = this.model.attributes.id;
+    var placeObject = this.model.attributes
 
-    addMarker(lat, lng, info, data, place_id);
+    addMarker(placeObject, data);
 
+    // var lat = parseFloat(this.model.attributes.latitude);
+    // var lng = parseFloat(this.model.attributes.longitude);
+    // var info = this.model.attributes.name;
+    // var place_id = this.model.attributes.id;
+
+    // addMarker(lat, lng, info, data, place_id);
   }
 
 });
