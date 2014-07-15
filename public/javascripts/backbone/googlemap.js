@@ -10,14 +10,13 @@ function mapInitialize() {
 
 }
 
-function addMarker(lat, lng){
+function addMarker(lat, lng, info, data){
   var placeLatLng = new google.maps.LatLng(lat, lng);
 
   // places marker(symbol) on map
   var placeMarker = new google.maps.Marker({
       position: placeLatLng,
       map: map,
-      title: "Hello World!",
       animation: google.maps.Animation.DROP,
       // icon: {
       //   path: google.maps.SymbolPath.CIRCLE,
@@ -27,4 +26,20 @@ function addMarker(lat, lng){
 
   map.panTo(placeLatLng);
 
+  var contentString = "<div style='height: 150px;'><p class='place_graph'>" + info +"</p></div>"
+
+  var infowindow = new google.maps.InfoWindow({
+      content: contentString
+  });
+
+  infowindow.open(map, placeMarker);
+
+  google.maps.event.addListener(infowindow,'domready',function(){
+    console.log("yay");
+    projectData(data);
+  });
+
+
 }
+
+

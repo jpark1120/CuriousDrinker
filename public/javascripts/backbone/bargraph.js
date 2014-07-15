@@ -1,8 +1,8 @@
 
 function projectData(dataset){
 
-  var width = 150,
-      height = 200;
+  var width = 50,
+      height = 100;
 
   var barWidth = width / dataset.length;
 
@@ -12,7 +12,7 @@ function projectData(dataset){
     // output range
     .range([0, height-10]);
 
-  var svg = d3.select(".info_container")
+  var svg = d3.select(".place_graph")
                .append("svg")
                .attr("width", width)
                .attr("height", height);
