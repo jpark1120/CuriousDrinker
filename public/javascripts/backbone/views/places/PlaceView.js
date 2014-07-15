@@ -43,18 +43,6 @@ Popcheckapp.Views.PlaceView = Backbone.View.extend({
 
 // $( "#foo" ).toggleClass( className, addOrRemove );
 
-    // if (counter !== 1){
-    //   counter = 1
-    //   console.log(counter)
-    //   return counter
-    // } else {
-    //   removeMarker();
-    //   counter = 0
-    //   console.log(counter)
-    //   return counter
-    // }
-
-
 
     // var lat = parseFloat(this.model.attributes.latitude);
     // var lng = parseFloat(this.model.attributes.longitude);

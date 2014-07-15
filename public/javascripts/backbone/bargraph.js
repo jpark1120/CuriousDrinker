@@ -8,8 +8,10 @@ function projectData(dataset, place_id){
 
   var y = d3.scale.linear()
     // input domain
-    .domain([0, d3.max(dataset, function(d){ return 30000 } )])
-    // set return to 15000 to see a relatively ok representation...30000 to see hotel chantelle
+    .domain([0, d3.max(dataset, function(d){ return 33000 } )])
+
+    // { return d.checkins }
+    // set return to 15000 to see a relatively ok representation...33000 to see Beauty and Essex
     // output range
     .range([0, height-10]);
 
