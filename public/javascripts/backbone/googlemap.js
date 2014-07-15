@@ -1,7 +1,7 @@
 function mapInitialize() {
   var mapOptions = {
     center: new google.maps.LatLng(40.7160085,-73.9830292),
-    zoom: 18,
+    zoom: 17,
     scrollwheel: false,
     streetViewControl: false
   };
@@ -10,7 +10,7 @@ function mapInitialize() {
 
 }
 
-function addMarker(lat, lng, info, data){
+function addMarker(lat, lng, info, data, place_id){
   var placeLatLng = new google.maps.LatLng(lat, lng);
 
   // places marker(symbol) on map
@@ -23,10 +23,10 @@ function addMarker(lat, lng, info, data){
         scale: 10
       }
   });
-
+// str.replace("Microsoft", "W3Schools");
   map.panTo(placeLatLng);
 
-  var contentString = "<div class='infowindow'><p class='place_graph'>" + info +"</p></div>"
+  var contentString = "<div class='infowindow'><p id='place"+ place_id +"'>" + info +"</p></div>"
 
   var infowindow = new google.maps.InfoWindow({
       content: contentString
@@ -36,9 +36,9 @@ function addMarker(lat, lng, info, data){
 
   google.maps.event.addListener(infowindow,'domready',function(){
     console.log("yay");
-    projectData(data);
+    projectData(data, place_id);
     $('.infowindow').parent().parent().siblings().css('opacity', '1');
-    $('.infowindow').parent().parent().siblings().css('text-align', 'center');
+    // $('.infowindow').parent().parent().siblings().css('text-align', 'center');
     $('.gm-style-iw').css('width', '100%');
     $('.gm-style-iw').css('left', '0px');
   });

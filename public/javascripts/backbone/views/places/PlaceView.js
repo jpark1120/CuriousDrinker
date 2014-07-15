@@ -29,8 +29,9 @@ Popcheckapp.Views.PlaceView = Backbone.View.extend({
     var lat = parseFloat(this.model.attributes.latitude);
     var lng = parseFloat(this.model.attributes.longitude);
     var info = this.model.attributes.name;
+    var place_id = this.model.attributes.id;
 
-    addMarker(lat, lng, info, data);
+    addMarker(lat, lng, info, data, place_id);
 
   }
 

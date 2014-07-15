@@ -41,12 +41,8 @@ body {
   border: 1px solid red;
 }
 
-/*to make bargraphs come out in the middle of the div*/
-.place_graph {
-  text-align: center;
-}
 
-.infowindow{
-  min-width: 52px;
+.infowindow {
   min-height: 110px;
+  text-align: center;
 }
