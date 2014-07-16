@@ -13,4 +13,13 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+//= require underscore
+//= require backbone
+//= require d3
+//= require models/Place
+//= require views/places/PlaceView
+//= require collections/PlaceCollection
+//= require views/places/PlaceListView
+//= require bargraph
+//= require googlemap
+//= require popcheck
