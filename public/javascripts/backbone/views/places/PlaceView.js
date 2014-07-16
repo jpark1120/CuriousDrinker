@@ -22,16 +22,16 @@ Popcheckapp.Views.PlaceView = Backbone.View.extend({
     // uncomment if putting graph in the top right box again
     // $('.info_container').empty();
 
-    var data = [
-      { name: "visitors", checkins: this.model.attributes.fsq_visitors, color: "#78DBE2" },
-      { name: "checkins", checkins: this.model.attributes.fsq_checkins, color: "#FFA474" }
-    ];
+    // var data = [
+    //   { name: "visitors", checkins: this.model.attributes.fsq_visitors, color: "#78DBE2" },
+    //   { name: "checkins", checkins: this.model.attributes.fsq_checkins, color: "#FFA474" }
+    // ];
 
     var placeObject = this.model.attributes
     console.log(this.$el.attr('class'))
     if (this.$el.attr('class') === 'unclicked'){
       this.$el.removeClass('unclicked').addClass('clicked');
-      addMarker(placeObject, data);
+      addMarker(placeObject);
     } else {
       this.$el.removeClass('clicked').addClass('unclicked');
       console.log("removed!")

@@ -10,7 +10,7 @@ function mapInitialize() {
 
 }
 
-function addMarker(placeObject, data){
+function addMarker(placeObject){
   var lat = parseFloat(placeObject.latitude);
   var lng = parseFloat(placeObject.longitude);
   var placeLatLng = new google.maps.LatLng(lat, lng);
@@ -33,6 +33,12 @@ function addMarker(placeObject, data){
 
   // invoke method to grab largest value for map
   var largestNumber = maxGetter(collection);
+  // data object to pass into graph generate
+  var data = [
+    { name: "visitors", checkins: placeObject.fsq_visitors, color: "#78DBE2" },
+    { name: "checkins", checkins: placeObject.fsq_checkins, color: "#FFA474" }
+  ];
+
 
   var contentString = "<div class='infowindow' id='infowindow" + placeObject.id + "'style='height: " + 221 +"px;'><p>" + placeObject.name +"</p></div>"
 
