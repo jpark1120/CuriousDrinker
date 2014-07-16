@@ -25,7 +25,7 @@ function projectData(dataset, place_id, highestSet){
 
   // querySelector does not like leading digits for an ID
   // If the first character of an identifier is numeric, you’ll need to escape it based on its Unicode code point like #\300 but you can also just string concatenate a letter in front
-  var svg = d3.select("#place"+ place_id +"")
+  var svg = d3.select("#infowindow"+ place_id +"")
                .append("svg")
                .attr("width", width)
                .attr("height", height);

@@ -34,7 +34,7 @@ function addMarker(placeObject, data){
   // invoke method to grab largest value for map
   var largestNumber = maxGetter(collection);
 
-  var contentString = "<div class='infowindow' style='height: " + 221 +"px;'><p id='place"+ placeObject.id +"'>" + placeObject.name +"</p></div>"
+  var contentString = "<div class='infowindow' id='infowindow" + placeObject.id + "'style='height: " + 221 +"px;'><p>" + placeObject.name +"</p></div>"
 
   var infowindow = new google.maps.InfoWindow({
       content: contentString

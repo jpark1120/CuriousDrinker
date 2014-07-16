@@ -48,12 +48,17 @@ body {
 .infowindow {
   /*min-height: 210px;*/
   text-align: center;
+  min-width: 80px;
+}
+
+/* can take out probably after using reset*/
+.infowindow p{
+  margin: 0px;
+  padding: 0px;
+  padding-right: 3px;
+  font-weight: bold;
 }
 
 .clicked {
   background-color: green;
-}
-
-svg {
-  clear: both;
 }
