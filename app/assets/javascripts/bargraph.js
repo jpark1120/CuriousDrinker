@@ -9,8 +9,8 @@ function projectData(dataset, place_id, highestSet){
 
   // var height = Math.max.apply(Math, numberHolder) / 100;
   // console.log(height) 
-  var width = 75;
-    height = 200;
+  var width = 75,
+      height = 200;
   // var highestValue = highestSet / 100;
   var barWidth = width / dataset.length;
 
@@ -45,24 +45,55 @@ function projectData(dataset, place_id, highestSet){
         .ease("circle")
         .attr("y", function(d) { return height - y(d.checkins) ; })
         .attr("height", function(d) { return y(d.checkins) ; });
-
-    // svg.selectAll("text")
-    //   .data(dataset)
-    //   .enter()
-    //   .append("text")
-    //   .text(function(d) { return d.name })
-    //     .attr("x", function(d, i) { return i * barWidth + 25 } )
-    //     .attr("y", height - 10)
-    //     // .attr("y", function(d) { return height - y(d.checkins) })
-    //     // .attr("dy", "1em")
-    //       .style('font-size', "15px")
-    
-    // $('.infowindow').parent().parent().siblings().css("height", height+"px");
-
-
-    // d3.select(".infowindow")
-    //   .style("height", height+"px;");
-
 }
 // .ease("elastic", 1, 0.15)
 // .ease("elastic", a, p) where a is the amplitude (default 1) p is elasticity (bounciness) measure (default 0.45).
+
+
+function projectDataWindow(placeObject){
+  var width = 250,
+      height = 250;
+  var dataset = [
+    { name: "visitors", checkins: placeObject.fsq_visitors, color: "#78DBE2" },
+    { name: "checkins", checkins: placeObject.fsq_checkins, color: "#FFA474" }
+  ]
+  var barWidth = width / dataset.length;
+  // invoke method to grab largest value for map
+  // var largestNumber = maxGetter(collection);
+  var y = d3.scale.linear()
+    // input domain
+    .domain([0, d3.max(dataset, function(d){ return d.checkins })])
+    // output range
+    .range([0, height-10]);
+
+  var svg = d3.select(".info_container")
+               .append("svg")
+               .attr("width", width)
+               .attr("height", height);
+
+    svg.selectAll("rect")
+      .data(dataset)
+      .enter()
+      .append("rect")
+        .attr("x", function(d, i) { return i * barWidth; })
+        .attr("y", height)
+        .attr("width", barWidth)
+        .attr("height", 0)
+        .style("fill", function(d){ return d.color; })
+      .transition()
+        // .delay(function(d, i) { return i * 100; })
+        .duration(1000)
+        .ease("circle")
+        .attr("y", function(d) { return height - y(d.checkins) ; })
+        .attr("height", function(d) { return y(d.checkins) ; });
+    
+    svg.selectAll("text")
+      .data(dataset)
+      .enter()
+      .append("text")
+      .text(function(d) { return d.checkins })
+        .attr("x", function(d, i) { return i * barWidth + 45 } )
+        .attr("y", function(d) { return height - y(d.checkins)+ 15 })
+        // .attr("dy", "1em")
+          .style('font-size', "15px")
+}
