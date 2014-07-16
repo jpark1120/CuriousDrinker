@@ -39,23 +39,37 @@ function addMarker(placeObject){
     { name: "checkins", checkins: placeObject.fsq_checkins, color: "#FFA474" }
   ];
 
-
   var contentString = "<div class='infowindow' id='infowindow" + placeObject.id + "'style='height: " + 221 +"px;'><p>" + placeObject.name +"</p></div>"
 
+
   var infowindow = new google.maps.InfoWindow({
-      content: contentString
+      content: contentString,
+      // pixelOffset: new google.maps.Size(0, 10)
+      // uncomment to reposition position of infowindow
   });
   infowindow.open(map, placeMarker);
+
+  // Bring latest infowindow to top
+  // var zIndexNew = 9999 + Object.keys(markers).length
+  // the latest window comes up on top if z-index is the same so dont need to have incrementing z-index value.
+  infowindow.setZIndex(9999);
 
   google.maps.event.addListener(infowindow, 'domready', function(){
     console.log("yay");
     projectData(data, placeObject.id, largestNumber);
+
+    console.log(Object.keys(markers).length);
+    // CSS being set with jquery to override googles inline style
+    // css for infowindow on generation
     $('.infowindow').parent().parent().siblings().css('opacity', '0.7');
     $('.gm-style-iw').css('width', '100%');
     $('.gm-style-iw').css('left', '0px');
+
   });
 
+
   google.maps.event.addListener(placeMarker, 'click', function(){
+    // user can open window by clicking on marker as well
     infowindow.open(map, placeMarker);
     projectData(data, placeObject.id, largestNumber);
   });
@@ -64,6 +78,7 @@ function addMarker(placeObject){
 function removeMarker(placeId){
   var here = markers[placeId];
   here.setMap(null);
-  delete markers[placeId];
+  // not being deleted for the z-index of infowindows
+  // delete markers[placeId];
 }
 
