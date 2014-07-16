@@ -13,7 +13,6 @@ function mapInitialize() {
 function addMarker(placeObject, data){
   var lat = parseFloat(placeObject.latitude);
   var lng = parseFloat(placeObject.longitude);
-
   var placeLatLng = new google.maps.LatLng(lat, lng);
 
   // places marker(symbol) on map
@@ -30,20 +29,21 @@ function addMarker(placeObject, data){
   });
 
   markers[placeObject.id] = placeMarker;
-
   map.panTo(placeLatLng);
 
-  var contentString = "<div class='infowindow'><p id='place"+ placeObject.id +"'>" + placeObject.name +"</p></div>"
+  // invoke method to grab largest value for map
+  var largestNumber = maxGetter(collection);
+
+  var contentString = "<div class='infowindow' style='height: " + 221 +"px;'><p id='place"+ placeObject.id +"'>" + placeObject.name +"</p></div>"
 
   var infowindow = new google.maps.InfoWindow({
       content: contentString
   });
-
   infowindow.open(map, placeMarker);
 
   google.maps.event.addListener(infowindow, 'domready', function(){
     console.log("yay");
-    projectData(data, placeObject.id);
+    projectData(data, placeObject.id, largestNumber);
     $('.infowindow').parent().parent().siblings().css('opacity', '0.7');
     $('.gm-style-iw').css('width', '100%');
     $('.gm-style-iw').css('left', '0px');
@@ -51,7 +51,7 @@ function addMarker(placeObject, data){
 
   google.maps.event.addListener(placeMarker, 'click', function(){
     infowindow.open(map, placeMarker);
-    projectData(data, placeObject.id);
+    projectData(data, placeObject.id, largestNumber);
   });
 }
 

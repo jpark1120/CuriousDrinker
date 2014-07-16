@@ -1,19 +1,27 @@
 
-function projectData(dataset, place_id){
+function projectData(dataset, place_id, highestSet){
+  // var numberHolder = []
+  
+  // dataset.forEach(function(bar){
+  //   numberHolder.push(bar.checkins)
+  //   return numberHolder
+  // });
 
-  var width = 50,
-      height = 100;
-
+  // var height = Math.max.apply(Math, numberHolder) / 100;
+  // console.log(height) 
+  var width = 75;
+    height = 200;
+  // var highestValue = highestSet / 100;
   var barWidth = width / dataset.length;
 
   var y = d3.scale.linear()
     // input domain
-    .domain([0, d3.max(dataset, function(d){ return 33000 } )])
-
+    .domain([0, highestSet])
+    // d3.max(dataset, function(d){ return d.checkins })
     // { return d.checkins }
     // set return to 15000 to see a relatively ok representation...33000 to see Beauty and Essex
     // output range
-    .range([0, height-10]);
+    .range([0, height]);
 
   // querySelector does not like leading digits for an ID
   // If the first character of an identifier is numeric, you’ll need to escape it based on its Unicode code point like #\300 but you can also just string concatenate a letter in front
@@ -48,6 +56,12 @@ function projectData(dataset, place_id){
     //     // .attr("y", function(d) { return height - y(d.checkins) })
     //     // .attr("dy", "1em")
     //       .style('font-size', "15px")
+    
+    // $('.infowindow').parent().parent().siblings().css("height", height+"px");
+
+
+    // d3.select(".infowindow")
+    //   .style("height", height+"px;");
 
 }
 // .ease("elastic", 1, 0.15)
