@@ -61,6 +61,11 @@ table {
 }
 
 /* ******************* My styles ****************** */
+/* UTIL */
+.clear {
+  clear: both;
+}
+
 
 html { 
   height: 100%;
@@ -79,9 +84,7 @@ body {
   font-size: 10px;
   /*color: white;*/
   height: 100%;
-  margin: 0; 
-  padding: 0;
-  min-width: 960px;
+  max-height: 768px;
 }
 
 .pg_container{
@@ -94,8 +97,6 @@ body {
 }
 
 .content{
-  margin-left: 10px;
-  margin: 0 auto;
   width:100%;
   height:100%;
   display: none;
@@ -130,9 +131,9 @@ body {
 .col_right {
   float: left;
   border: 1px solid $darkest_grey;
-  min-width:275px;
   width: 29.7%;
   height: 90%;
+  overflow: scroll;
 }
 
 /* Big Graph Display */
@@ -188,4 +189,3 @@ body {
   padding-right: 3px;
   font-weight: bold;
 }
-
