@@ -42,7 +42,7 @@ function projectData(dataset, place_id, highestSet){
       .transition()
         // .delay(function(d, i) { return i * 100; })
         .duration(1000)
-        .ease("circle")
+        .ease("elastic")
         .attr("y", function(d) { return height - y(d.checkins) ; })
         .attr("height", function(d) { return y(d.checkins) ; });
 }
@@ -64,7 +64,7 @@ function projectDataWindow(placeObject){
     // input domain
     .domain([0, d3.max(dataset, function(d){ return d.checkins })])
     // output range
-    .range([0, height-10]);
+    .range([0, height-30]);
 
   var svg = d3.select(".info_container")
                .append("svg")
@@ -95,5 +95,35 @@ function projectDataWindow(placeObject){
         .attr("x", function(d, i) { return i * barWidth + 45 } )
         .attr("y", function(d) { return height - y(d.checkins)+ 15 })
         // .attr("dy", "1em")
-          .style('font-size', "15px")
+        .style('font-size', "15px")
+        .style('font-weight', "bold");
+
+    svg.append("text")
+      .text(placeObject.name)
+        .attr("x", (barWidth))             
+        .attr("y", 25)
+        .attr("text-anchor", "middle")
+        .style("font-weight", "bold")
+        .style("font-size", "16px");
+    
+    // fix it only appends once for some weird reason
+    // svg.append("text")
+    //   .data(dataset)
+    //   .text(function(d){ return d.name })
+    //     .attr("x", function(d, i) { return i * barWidth + 65 } )            
+    //     .attr("y", height - 5)
+    //     .attr("text-anchor", "middle")
+    //     .style("font-weight", "bold")
+    //     .style("font-size", "16px");
+
+    svg.selectAll("text")
+      .data(dataset)
+      .append("text")
+      .text(function(d) { return d.name })
+        .attr("x", function(d, i) { return i * barWidth + 45 } )
+        .attr("y", function(d) { return height - y(d.checkins)+ 15 })
+        // .attr("dy", "1em")
+        .style('font-size', "15px")
+        .style('font-weight', "bold");
+
 }

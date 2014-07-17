@@ -33,22 +33,24 @@ function maxGetter(collection){
   return largest;
 }
 
+function enterSite(){
 
+  $('#ignition').on('click', function(evt){
+    evt.preventDefault();
+    console.log("clicked");
+    $('#landing_page').css("display", "none");
+    // $('.pg_container').css("display", "block");
+    $('.content').fadeIn('slow');
+    // necessary for map to resize properly after fading in
+    google.maps.event.trigger(map, "resize");
+  });
+}
 
 $(function(){
   mapInitialize();
   Popcheckapp.initialize();
+  enterSite();
 });
 
-// enterSite();
 
-// function enterSite(){
 
-//   $('#ignition').on('click', function(evt){
-//     evt.preventDefault();
-//     console.log("clicked");
-//     $('#landing_page').css("display", "none");
-//     $('#actual_app').css("display", "block");
-//   });
-
-// }

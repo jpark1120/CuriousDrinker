@@ -7,8 +7,8 @@
   <script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?key=#{Rails.application.secrets.google_map_api}"></script>
   <script type="text/template" id='place-template'>
-    <p><%%= name %></p>
-    <p><%%= address %></p>
+    <p class="store_name"><%%= name %></p>
+    <p class="store_address"><%%= address %></p>
   </script>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>

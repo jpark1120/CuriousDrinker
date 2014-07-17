@@ -71,6 +71,8 @@ function addMarker(placeObject){
   google.maps.event.addListener(placeMarker, 'click', function(){
     // user can open window by clicking on marker as well
     infowindow.open(map, placeMarker);
+    $('.info_container').empty();
+    projectDataWindow(placeObject);
     projectData(data, placeObject.id, largestNumber);
   });
 }
