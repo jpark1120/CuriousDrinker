@@ -4,6 +4,7 @@
 */
 @import 'fonts';
 $tint: 0.9;
+$darkest_grey_opague: rgba(58, 53, 62, $tint);
 $darkest_grey: rgb(58, 53, 62);
 $darker_grey_opague: rgba(116, 106, 125, $tint);
 $darker_grey: rgb(116, 106, 125);
@@ -14,6 +15,8 @@ $darker_orange: rgb(250, 136, 42);
 $lighter_orange_opague: rgba(250, 136, 42, $tint);
 $lighter_orange: rgb(250, 136, 42);
 $kind_of_white: rgb(250, 248, 245);
+$box-height: 300px;
+$box-width: 600px;
 
 
 html, body, div, span, applet, object, iframe,
@@ -94,10 +97,40 @@ body {
 
 .landing_page{
   display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -($box-height / 2); 
+  margin-left: -($box-width / 2);
+  height: $box-height;
+  width: $box-width;
+  text-align: center;
+  border-radius: 15px;
+  border: 5px solid $kind_of_white;
+  background-color: $darkest_grey_opague;
+  color: $darker_orange_opague;
+  line-height: 1.7em;
+}
+
+.landing_page h1{
+  margin-top: 70px;
+  font-size: 40px;
+  font-weight: bold;
+  color: $darker_orange;
+  margin-bottom: 20px;
+}
+
+.landing_page p{
+  font-size: 12px;
+}
+
+.landing_page h5{
+  margin-bottom: 15px;
 }
 
 .content{
   width:100%;
+  min-width: 1366px;
   height:100%;
   display: none;
   text-align: center;

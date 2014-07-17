@@ -38,7 +38,7 @@ function enterSite(){
   $('#ignition').on('click', function(evt){
     evt.preventDefault();
     console.log("clicked");
-    $('#landing_page').css("display", "none");
+    $('.landing_page').css("display", "none");
     // $('.pg_container').css("display", "block");
     $('.content').fadeIn('slow');
     // necessary for map to resize properly after fading in
