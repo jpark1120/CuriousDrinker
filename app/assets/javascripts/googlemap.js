@@ -35,8 +35,8 @@ function addMarker(placeObject){
   var largestNumber = maxGetter(collection);
   // data object to pass into graph generate
   var data = [
-    { name: "visitors", checkins: placeObject.fsq_visitors, color: "#78DBE2" },
-    { name: "checkins", checkins: placeObject.fsq_checkins, color: "#FFA474" }
+    { name: "visitors", checkins: placeObject.fsq_visitors, color: "rgb(116, 106, 125)" },
+    { name: "checkins", checkins: placeObject.fsq_checkins, color: "rgb(250, 136, 42)" }
   ];
 
   var contentString = "<div class='infowindow' id='infowindow" + placeObject.id + "'style='height: " + 221 +"px;'><p>" + placeObject.name +"</p></div>"
