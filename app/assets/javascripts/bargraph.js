@@ -107,23 +107,23 @@ function projectDataWindow(placeObject){
         .style("font-size", "16px");
     
     // fix it only appends once for some weird reason
-    // svg.append("text")
-    //   .data(dataset)
-    //   .text(function(d){ return d.name })
-    //     .attr("x", function(d, i) { return i * barWidth + 65 } )            
-    //     .attr("y", height - 5)
-    //     .attr("text-anchor", "middle")
-    //     .style("font-weight", "bold")
-    //     .style("font-size", "16px");
-
-    svg.selectAll("text")
+    svg.append("text")
       .data(dataset)
-      .append("text")
-      .text(function(d) { return d.name })
-        .attr("x", function(d, i) { return i * barWidth + 45 } )
-        .attr("y", function(d) { return height - y(d.checkins)+ 15 })
-        // .attr("dy", "1em")
-        .style('font-size', "15px")
-        .style('font-weight', "bold");
+      .text(function(d){ return d.name })
+        .attr("x", function(d, i) { return i * barWidth + 65 } )            
+        .attr("y", height - 5)
+        .attr("text-anchor", "middle")
+        .style("font-weight", "bold")
+        .style("font-size", "16px");
+
+    // svg.selectAll("text")
+    //   .data(dataset)
+    //   .append("text")
+    //   .text(function(d) { return d.name })
+    //     .attr("x", function(d, i) { return i * barWidth + 45 } )
+    //     .attr("y", function(d) { return height - y(d.checkins)+ 15 })
+    //     // .attr("dy", "1em")
+    //     .style('font-size', "15px")
+    //     .style('font-weight', "bold");
 
 }

@@ -3,7 +3,8 @@
    License: none (public domain)
 */
 @import 'fonts';
-$tint: 0.8;
+$tint: 0.9;
+$darkest_grey: rgb(58, 53, 62);
 $darker_grey_opague: rgba(116, 106, 125, $tint);
 $darker_grey: rgb(116, 106, 125);
 $lighter_grey_opague: rgba(113, 113, 138, $tint);
@@ -14,12 +15,6 @@ $lighter_orange_opague: rgba(250, 136, 42, $tint);
 $lighter_orange: rgb(250, 136, 42);
 $kind_of_white: rgb(250, 248, 245);
 
-// darker orange
-// FA882A
-// lighter orange
-// FC9826
-// "white"
-// FAF8F5
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -83,7 +78,7 @@ body {
   font-family: 'Raleway', sans-serif;
   font-size: 10px;
   /*color: white;*/
-  height: 100%; 
+  height: 100%;
   margin: 0; 
   padding: 0;
   min-width: 960px;
@@ -99,14 +94,34 @@ body {
 }
 
 .content{
+  margin-left: 10px;
   margin: 0 auto;
   width:100%;
   height:100%;
   display: none;
+  text-align: center;
+}
+
+/* Top Banner */
+.top_banner {
+  text-align: center;
+  background-color: $darkest_grey;
+  padding: 7px 0;
+}
+
+.top_banner h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: $darker_orange;
+  margin-bottom: 7px;
+}
+.top_banner p {
+  font-size: 14px;
+  color: $kind_of_white;
 }
 
 .col_left { 
-  border:1px solid black;
+  border:1px solid $darkest_grey;
   float: left;
   width: 70%;
   height: 90%;
@@ -114,16 +129,16 @@ body {
 /* Right Column */
 .col_right {
   float: left;
-  border: 1px solid black;
+  border: 1px solid $darkest_grey;
   min-width:275px;
-  width: 25%;
+  width: 29.7%;
   height: 90%;
-  overflow: hidden;
 }
 
 /* Big Graph Display */
 .info_container{
-  border: 1px solid black;
+  border: 1px solid $darkest_grey;
+  border-top: none;
   height: 35%;
   min-height: 260px;
   text-align: center;
@@ -131,9 +146,10 @@ body {
 
 /* List Display */
 .places_container{
-  border: 1px solid black;
-  height: 65%;
-  overflow: scroll;
+  border: 1px solid $darkest_grey;
+  height: 61%;
+  // min-height: 500px;
+  overflow-y: scroll;
 }
 
 .places_container div{
@@ -147,10 +163,6 @@ body {
   font-size: 25px;
   font-weight: bold;
 }
-
-// .store_address{
-//   // font-color: #71718A;
-// }
 
 /* List Display Clicked and Unclicked*/
 .unclicked {
