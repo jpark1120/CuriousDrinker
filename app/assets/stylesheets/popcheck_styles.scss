@@ -3,6 +3,23 @@
    License: none (public domain)
 */
 @import 'fonts';
+$tint: 0.8;
+$darker_grey_opague: rgba(116, 106, 125, $tint);
+$darker_grey: rgb(116, 106, 125);
+$lighter_grey_opague: rgba(113, 113, 138, $tint);
+$lighter_grey: rgb(113,113,138);
+$darker_orange_opague: rgba(250, 136, 42, $tint);
+$darker_orange: rgb(250, 136, 42);
+$lighter_orange_opague: rgba(250, 136, 42, $tint);
+$lighter_orange: rgb(250, 136, 42);
+$kind_of_white: rgb(250, 248, 245);
+
+// darker orange
+// FA882A
+// lighter orange
+// FC9826
+// "white"
+// FAF8F5
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -55,7 +72,13 @@ html {
 }
 
 body {
-  background: url('https://s3.amazonaws.com/ooomf-com-files/ddTzoX58Q153kjaitXl4_ny.jpg');
+  background: 
+    // linear-gradient(
+    //   to left, 
+    //   RGBA(116, 106, 125, 0.6), 
+    //   RGBA(113, 113, 138, 0.6)
+    // ),
+    url('https://s3.amazonaws.com/ooomf-com-files/ddTzoX58Q153kjaitXl4_ny.jpg');
   background-size: cover;
   font-family: 'Raleway', sans-serif;
   font-size: 10px;
@@ -114,25 +137,32 @@ body {
 }
 
 .places_container div{
-  border: 1px solid red;
   min-height: 50px;
   text-align: center;
   padding: 10px;
   font-size: 20px;
 }
 
-.store_name{
+.store_name {
   font-size: 25px;
   font-weight: bold;
 }
 
-.store_address{
-
-}
+// .store_address{
+//   // font-color: #71718A;
+// }
 
 /* List Display Clicked and Unclicked*/
+.unclicked {
+  background-color: $darker_orange_opague;
+  color: $darker_grey; 
+  border-bottom: 1px solid $darker_grey_opague;
+}
+
 .clicked {
-  background-color: #78DBE2;
+  background-color: $darker_grey_opague;
+  color: $darker_orange;
+  border-bottom: 1px solid $darker_orange_opague;
 }
 
 /* Information Window on Map */
