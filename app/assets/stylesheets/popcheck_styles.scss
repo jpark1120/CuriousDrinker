@@ -201,13 +201,13 @@ body {
 /* List Display Clicked and Unclicked*/
 .unclicked {
   background-color: $darker_orange_opague;
-  color: $darker_grey; 
+  color: $kind_of_white; 
   border-bottom: 1px solid $darker_grey_opague;
 }
 
 .clicked {
   background-color: $darker_grey_opague;
-  color: $darker_orange;
+  color: $kind_of_white;
   border-bottom: 1px solid $darker_orange_opague;
 }
 
