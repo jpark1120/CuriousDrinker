@@ -1,7 +1,3 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 @import 'fonts';
 $tint: 0.9;
 $darkest_grey_opague: rgba(58, 53, 62, $tint);
@@ -18,7 +14,10 @@ $kind_of_white: rgb(250, 248, 245);
 $box-height: 300px;
 $box-width: 600px;
 
-
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
