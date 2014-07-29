@@ -10,7 +10,9 @@ Popcheckapp.Models.Place = Backbone.Model.extend({
     fsq_visitors: null,
     fsq_checkins: null,
     latitude: null,
-    longitude: null
+    longitude: null,
+    males: null,
+    females: null
   }
 });
 

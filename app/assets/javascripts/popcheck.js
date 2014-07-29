@@ -23,8 +23,8 @@ function maxGetter(collection){
   var newArray = []
   
   collection.models.forEach(function(placeObject){
-    newArray.push(placeObject.attributes.fsq_checkins);
-    newArray.push(placeObject.attributes.fsq_visitors);
+    newArray.push(placeObject.attributes.males);
+    newArray.push(placeObject.attributes.females);
     return newArray;
   })
 

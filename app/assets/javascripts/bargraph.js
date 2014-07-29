@@ -54,8 +54,8 @@ function projectDataWindow(placeObject){
   var width = 250,
       height = 250;
   var dataset = [
-    { name: "visitors", checkins: placeObject.fsq_visitors, color: "rgb(116, 106, 125)" },
-    { name: "checkins", checkins: placeObject.fsq_checkins, color: "rgb(250, 136, 42)" }
+    { name: "males", checkins: placeObject.males, color: "rgb(116, 106, 125)" },
+    { name: "females", checkins: placeObject.females, color: "rgb(250, 136, 42)" }
   ]
   var barWidth = width / dataset.length;
   // invoke method to grab largest value for map

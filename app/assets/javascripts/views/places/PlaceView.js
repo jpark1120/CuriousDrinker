@@ -19,8 +19,6 @@ Popcheckapp.Views.PlaceView = Backbone.View.extend({
   },
   renderBarGraph: function(){
     console.log(this.model.attributes.name);
-    // uncomment if putting graph in the top right box again
-    // $('.info_container').empty();
 
     var placeObject = this.model.attributes
     console.log(this.$el.attr('class'))
@@ -38,14 +36,4 @@ Popcheckapp.Views.PlaceView = Backbone.View.extend({
   }
 
 });
-
-// $( "#foo" ).toggleClass( className, addOrRemove );
-
-
-    // var lat = parseFloat(this.model.attributes.latitude);
-    // var lng = parseFloat(this.model.attributes.longitude);
-    // var info = this.model.attributes.name;
-    // var place_id = this.model.attributes.id;
-
-    // addMarker(lat, lng, info, data, place_id);
 
