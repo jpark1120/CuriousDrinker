@@ -87,43 +87,33 @@ function projectDataWindow(placeObject){
         .attr("y", function(d) { return height - y(d.checkins) ; })
         .attr("height", function(d) { return y(d.checkins) ; });
     
-    svg.selectAll("text")
-      .data(dataset)
-      .enter()
-      .append("text")
-      .text(function(d) { return d.checkins })
-        .attr("x", function(d, i) { return i * barWidth + 45 } )
-        .attr("y", function(d) { return height - y(d.checkins)+ 15 })
-        // .attr("dy", "1em")
-        .style('font-size', "15px")
-        .style('font-weight', "bold");
+  var texts = svg.selectAll("text")
+              .data(dataset)
+              .enter();
 
-    svg.append("text")
-      .text(placeObject.name)
-        .attr("x", (barWidth))             
-        .attr("y", 25)
-        .attr("text-anchor", "middle")
-        .style("font-weight", "bold")
-        .style("font-size", "16px");
+    texts.append("text")
+    .text(function(d) { return d.checkins })
+      .attr("x", function(d, i) { return i * barWidth + 45 } )
+      .attr("y", function(d) { return height - y(d.checkins)+ 15 })
+      // .attr("dy", "1em")
+      .style('font-size', "15px")
+      .style('font-weight', "bold");
     
-    // fix it only appends once for some weird reason
-    svg.append("text")
-      .data(dataset)
-      .text(function(d){ return d.name })
+    texts.append("text")
+      .text(function(d) { return d.name })
         .attr("x", function(d, i) { return i * barWidth + 65 } )            
         .attr("y", height - 5)
         .attr("text-anchor", "middle")
         .style("font-weight", "bold")
         .style("font-size", "16px");
 
-    // svg.selectAll("text")
-    //   .data(dataset)
-    //   .append("text")
-    //   .text(function(d) { return d.name })
-    //     .attr("x", function(d, i) { return i * barWidth + 45 } )
-    //     .attr("y", function(d) { return height - y(d.checkins)+ 15 })
-    //     // .attr("dy", "1em")
-    //     .style('font-size', "15px")
-    //     .style('font-weight', "bold");
+    texts.append("text")
+      .text(placeObject.name)
+        .attr("x", (barWidth))             
+        .attr("y", 25)
+        .attr("text-anchor", "middle")
+        .style("font-weight", "bold")
+        .style("font-size", "16px");
+
 
 }
