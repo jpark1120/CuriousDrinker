@@ -22,4 +22,4 @@
 //= require views/places/PlaceListView
 //= require bargraph
 //= require googlemap
-//= require popcheck
+//= require curiousdrinker

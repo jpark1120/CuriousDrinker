@@ -1,9 +1,9 @@
-var Popcheckapp = Popcheckapp || { Models: {}, Collections: {}, Views: {} };
+var CuriousDrinker = CuriousDrinker || { Models: {}, Collections: {}, Views: {} };
 
-Popcheckapp.initialize = function(){
-  collection = new Popcheckapp.Collections.PlaceCollection();
+CuriousDrinker.initialize = function(){
+  collection = new CuriousDrinker.Collections.PlaceCollection();
 
-  var listView = new Popcheckapp.Views.PlaceListView({
+  var listView = new CuriousDrinker.Views.PlaceListView({
     collection: collection,
     el: $('.places_container')
   });
@@ -48,7 +48,7 @@ function enterSite(){
 
 $(function(){
   mapInitialize();
-  Popcheckapp.initialize();
+  CuriousDrinker.initialize();
   enterSite();
 });
 

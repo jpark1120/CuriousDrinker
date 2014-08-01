@@ -1,6 +1,6 @@
-var Popcheckapp = Popcheckapp || { Models: {}, Collections: {}, Views: {} };
+var CuriousDrinker = CuriousDrinker || { Models: {}, Collections: {}, Views: {} };
 
-Popcheckapp.Views.PlaceView = Backbone.View.extend({
+CuriousDrinker.Views.PlaceView = Backbone.View.extend({
   initialize: function(){
     this.listenTo(this.model, "change", this.render);
   },

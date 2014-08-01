@@ -1,6 +1,6 @@
-var Popcheckapp = Popcheckapp || { Models: {}, Collections: {}, Views: {} };
+var CuriousDrinker = CuriousDrinker || { Models: {}, Collections: {}, Views: {} };
 
-Popcheckapp.Models.Place = Backbone.Model.extend({
+CuriousDrinker.Models.Place = Backbone.Model.extend({
   initialize: function() {
     console.log("Place created");
   },
