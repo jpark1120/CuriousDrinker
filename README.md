@@ -6,7 +6,5 @@ A data visualization app that shows Foursquare’s most popular bars in the Lowe
 ![screenshot](docs/screenshot.png)
 
 ## Technical specs
-  - Back end: Ruby on Rails, Kayak API, Google Flight & Hotel.
-  - Authentication: Omniauth, Omniauth Facebook and Omniauth Twitter
+  - Back end: Ruby on Rails, Foursquare API.
   - Front end: Backbone.js, jQuery/AJAX, Google Maps API, D3.js
-  - Also jQuery UI, Font Awesome (SASS gem) and SASS
