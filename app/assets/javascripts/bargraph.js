@@ -93,7 +93,7 @@ function projectDataWindow(placeObject){
 
     texts.append("text")
     .text(function(d) { return d.checkins })
-      .attr("x", function(d, i) { return i * barWidth + 45 } )
+      .attr("x", function(d, i) { return i * barWidth + 50 } )
       .attr("y", function(d) { return height - y(d.checkins)+ 15 })
       // .attr("dy", "1em")
       .style('font-size', "15px")
