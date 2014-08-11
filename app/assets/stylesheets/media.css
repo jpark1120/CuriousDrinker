@@ -1,9 +1,12 @@
 @media screen and (max-width: 1024px) {
+  .main {
+    height: auto;
+  }
   .col_left {
-    max-height: 680px;
+    height: 680px;
   }
   .col_right{
-    max-height: 645px;
+    height: 645px;
   }
 }
 
