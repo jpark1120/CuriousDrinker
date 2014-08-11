@@ -1,11 +1,14 @@
 @media screen and (max-width: 1024px) {
+  .main {
+    height: 85%;
+  }
   .col_left {
     /*height: 680px;*/
     height: 95%;
   }
   .col_right{
     /*height: 645px;*/
-    height: 80%;
+    height: 82%;
   }
 }
 
