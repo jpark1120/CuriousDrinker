@@ -13,13 +13,13 @@
   }*/
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
   .main {
     height: 85%;
   }
   .content{
     /*change min width*/
-    min-width: 900px;
+    min-width: 768px;
     /*width % its at 100%*/
     /*height % its at 100%*/
   }
@@ -27,7 +27,7 @@
     /*floated*/
     display: block;
     width: 100%;
-    height: 50%;
+    height: 60%;
     float: none;
     clear: both;
     border: none;
@@ -47,7 +47,7 @@
   }
   .places_container {
     float: right;
-    width: 49.68%;
+    width: 49.6%;
     height: 100%;
     border-right: none;
   }
