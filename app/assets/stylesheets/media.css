@@ -52,3 +52,15 @@
     border-right: none;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .main {
+    height: auto;
+  }
+  .col_left {
+    height: 680px;
+  }
+  .col_right{
+    height: 645px;
+  }
+}
