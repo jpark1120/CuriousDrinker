@@ -1,16 +1,10 @@
-@media screen and (max-width: 480px) {
-/*  .box, .description{
-    min-width: 0px;
-    width: 100%;
+@media screen and (max-width: 1024px) {
+  .col_left {
+    max-height: 680px;
   }
-  .nav a{
-    margin: 2px auto;
+  .col_right{
+    max-height: 645px;
   }
-
-  .trio {
-    font-size: 25px;
-    margin-right: 1%;
-  }*/
 }
 
 @media screen and (max-width: 768px) {
@@ -53,11 +47,18 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
-  .col_left {
-    height: 680px;
+@media screen and (max-width: 480px) {
+/*  .box, .description{
+    min-width: 0px;
+    width: 100%;
   }
-  .col_right{
-    height: 645px;
+  .nav a{
+    margin: 2px auto;
   }
+
+  .trio {
+    font-size: 25px;
+    margin-right: 1%;
+  }*/
 }
+
