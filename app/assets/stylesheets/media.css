@@ -1,0 +1,54 @@
+@media screen and (max-width: 480px) {
+/*  .box, .description{
+    min-width: 0px;
+    width: 100%;
+  }
+  .nav a{
+    margin: 2px auto;
+  }
+
+  .trio {
+    font-size: 25px;
+    margin-right: 1%;
+  }*/
+}
+
+@media screen and (max-width: 960px) {
+  .main {
+    height: 85%;
+  }
+  .content{
+    /*change min width*/
+    min-width: 900px;
+    /*width % its at 100%*/
+    /*height % its at 100%*/
+  }
+  .col_left {
+    /*floated*/
+    display: block;
+    width: 100%;
+    height: 50%;
+    float: none;
+    clear: both;
+    border: none;
+  }
+  .col_right {
+    display: block;
+    float: none;
+    width: 100%;
+    height: 50%;
+  }
+  .info_container {
+    width: 50%;
+    height: 100%;
+    float: left;
+    background-color: rgba(229, 227, 223, 0.9);
+    border-top: 1px solid rgb(116, 106, 125);
+  }
+  .places_container {
+    float: right;
+    width: 49.68%;
+    height: 100%;
+    border-right: none;
+  }
+}
