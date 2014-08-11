@@ -4,11 +4,11 @@
   }
   .col_left {
     /*height: 680px;*/
-    height: 95%;
+    height: 100%;
   }
   .col_right{
     /*height: 645px;*/
-    height: 82%;
+    height: 100%;
   }
 }
 
