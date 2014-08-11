@@ -1,4 +1,7 @@
 @media screen and (max-width: 1024px) {
+  body {
+    background-size: 100% 100%;
+  }
   .main {
     height: auto;
   }
