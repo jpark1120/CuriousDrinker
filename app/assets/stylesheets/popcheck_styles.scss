@@ -190,6 +190,10 @@ body {
   font-size: 20px;
 }
 
+.touch {
+  -webkit-overflow-scrolling: touch;
+}
+
 .store_name {
   font-size: 25px;
   font-weight: bold;
