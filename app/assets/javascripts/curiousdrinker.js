@@ -8,7 +8,7 @@ CuriousDrinker.initialize = function(){
     el: $('.places_container')
   });
 
-  collection.fetch()
+  collection.fetch();
 
 }
 
@@ -20,7 +20,7 @@ var markers = {};
 
 // function for iterating through the collections array and pulling out the max checkin count
 function maxGetter(collection){
-  var newArray = []
+  var newArray = [];
   
   collection.models.forEach(function(placeObject){
     newArray.push(placeObject.attributes.males);
